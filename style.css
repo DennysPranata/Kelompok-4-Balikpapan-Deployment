@@ -1,0 +1,604 @@
+*, body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #004d40;
+    color: white;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.logo span {
+    color: white;
+}
+
+.logo span:nth-child(1) {
+    color: #FEBA01;
+    margin-right: 5px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover,
+.menu a.active {
+    border-bottom: 2px solid #FEBA01;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-icon span {
+    display: block;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked+.menu-icon span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+#menu-toggle:checked+.menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked+.menu-icon span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.hero {
+    background-image: url('https://www.tcnvending.com.au/wp-content/uploads/2020/03/vending-machines-for-sale-sydney.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero p {
+    margin: 10px 0;
+}
+.hero-text p {
+    margin: 25px 0px;
+}
+.home-text span{
+    font-size: 18px; 
+    margin-right: 5px
+}
+.home-text strong{
+    color: #feba01
+}
+.btn {
+    background-color: #FEBA01;
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+
+.btn:hover {
+    background-color: #fdd835;
+}
+
+
+/* OUR TEAM */
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.our-team-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 100px 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 0;
+
+    h3 {
+        color: #0D3B2E;
+        font-size: 2em;
+        font-weight: 900;
+    }
+}
+
+.our-team-header {
+    background-color: #6d9773;
+    margin: 0;
+    border-radius: 15px;
+
+    h3 {
+        margin: 0;
+        color: white;
+        margin: 20px 80px;
+    }
+}
+
+.our-team-container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    ;
+
+}
+
+.our-team-main-card {
+    display: flex;
+    margin-top: 71px;
+}
+
+.our-team-cards {
+    display: flex;
+}
+
+.our-team-card {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 40vh;
+    margin: 25px;
+
+}
+
+.our-team-photo {
+    background-color: #6d9773;
+    border-radius: 15px;
+    margin: 0;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.our-team-role {
+    font-family: arial;
+    font-size: 25px;
+    font-weight: 700;
+    opacity: 50%;
+    color: white;
+    position: absolute;
+    z-index: 1;
+}
+
+.image-front {
+    height: 36vh;
+    width: 34vh;
+    position: relative;
+    z-index: 2;
+}
+
+.our-team-name-wrapper {
+    border-radius: 15px;
+    margin-top: 20px;
+    background-color: #6d9773;
+
+    .our-team-name {
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 800;
+        font-family: arial;
+        padding: 22px;
+        margin: 0;
+    }
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.arrow-button {
+    background-color: #6d9773;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+}
+
+.arrow-button.left:hover {
+    background-color: #507055;
+    transform: translateX(-10px);
+}
+
+.arrow-button.right:hover {
+    background-color: #507055;
+    transform: translateX(10px);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #004d40;
+        padding: 20px;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle:checked+.menu-icon+.menu {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .promotion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .promotion-text,
+    .promotion-image {
+        max-width: 100%;
+    }
+
+    .promotion-details {
+        flex-direction: column;
+    }
+
+    .detail {
+        margin: 10px 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #request-data {
+        padding-top: 10px !important;
+        flex-direction: column !important;
+    }
+
+    #request-data form {
+        width: 100% !important;
+        margin: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .promotion-text {
+        margin-bottom: 20px;
+    }
+
+    #profil {
+        padding: inherit !important;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #profil .container {
+        flex-direction: row !important;
+    }
+
+    .our-team-cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .our-team-button {
+        height: 40px;
+        width: 40px;
+        margin: 0 10px;
+    }
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    margin-top: 50px
+}
+
+.chart-card {
+    color: #1a3b2f;
+    background-color: white;
+    border: 1px solid #1a3b2f;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    max-height: calc(100vh - 200px);
+    margin-top: 25px
+}
+
+.chart-card h2 {
+    margin-top: 0;
+    margin-bottom: 0px;
+    text-align: center
+}
+
+.chart-card p {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-align: center
+}
+
+.table-card {
+    color: #1a3b2f;
+    background-color: white;
+    border: 1px solid #1a3b2f;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    height: max-content;
+    margin-top: 25px
+}
+
+canvas {
+    width: 100% !important;
+    max-height: 200px;
+}
+
+#request-data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6d9773;
+    height: fit-content;
+}
+.request-text{
+    color: white; padding: 0px 50px
+}
+.request-text img{
+    width: 50%; height: auto
+}
+.request-text h1{
+    font-size: 34px; margin-bottom: 0px
+}
+.request-text p{
+    font-size: 20px; margin-top: 0px
+}
+#request-data form {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#request-data form table {
+    width: 100%;
+}
+
+td div {
+    display: flex;
+    flex-direction: column;
+}
+
+td div label {
+    color: #f7ba2f;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+td div input,
+td div select {
+    padding: 10px 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.form-phone{
+    flex-direction: row !important;
+}
+.form-phone select{
+    margin-right: 10px;
+}
+.form-phone input{
+    width: 100%;
+}
+#form-btn{
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    margin: 0px;
+}
+.media-profile {
+    height: 175px;
+    width: 150px;
+    border-radius: 25px;
+    background-color: #6d9773;
+}
+
+#profil {
+    padding: 60px 200px;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+#profil .container {
+    margin-top: 30px;
+}
+
+.promotion {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.promotion-text {
+    max-width: 50%;
+    text-align: center;
+}
+
+.promotion-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.promotion-text h1 span {
+    color: #6d9773;
+}
+
+.promotion-text p {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+}
+
+.promotion-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.detail {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.detail h2 {
+    font-size: 2em;
+    color: #6d9773;
+    margin: 0;
+}
+
+.detail p {
+    margin: 5px 0 0;
+    font-size: 1em;
+}
+
+.promotion-image {
+    max-width: 50%;
+}
+
+.promotion-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+.data-analytics{
+    height: fit-content
+}
+.data-analytics h1 {
+    margin: 0px;
+    text-align: center;
+    color: #1a3b2f;
+    font-weight: bold;
+    font-size: 34px;
+}
